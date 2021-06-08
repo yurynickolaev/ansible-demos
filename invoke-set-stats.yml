@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: test
   tasks:
     - name: "Artifact integration test results to the web"
       local_action: 'shell curl -F "file=@integration_results.txt" https://file.io'
