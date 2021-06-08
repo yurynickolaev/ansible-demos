@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: test
   tasks:
     - name: "Get test results from the web"
       uri:
