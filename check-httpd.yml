@@ -1,0 +1,10 @@
+---
+- hosts: test
+  tasks:
+    - name: "Check httpd status"
+      local_action: 'shell systemctl status httpd'
+      register: result
+    - name: "Artifact URL of test results to Tower Workflows"
+      set_stats:
+        data:
+          integration_results_url:  "{{ (result.stdout|from_json).link }}"
