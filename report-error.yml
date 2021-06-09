@@ -1,0 +1,6 @@
+---
+- hosts: test
+  tasks:
+    - name: "Report error"
+      debug:
+        msg: "Execution error"
