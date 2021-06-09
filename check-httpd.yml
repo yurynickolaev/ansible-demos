@@ -1,5 +1,5 @@
 ---
-- hosts: test
+- hosts: web
   tasks:
     - name: "Check httpd status"
       local_action: 'shell systemctl status httpd'
